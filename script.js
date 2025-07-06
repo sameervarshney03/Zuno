@@ -154,6 +154,7 @@ function playmusic(index, pause = false) {
 
 // }
 async function displayplaylists() {
+    console.log("🧠 displayplaylists() called");
     let res = await fetch("/songs/index.json");
     let folders = await res.json();
     
@@ -246,7 +247,7 @@ async function main() {
     playmusic(0,true); // play first song in pause mode
 
     //display playlist
-    await displayplaylists();
+    displayplaylists();
 
 
     // Play/Pause
