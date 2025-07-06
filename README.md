@@ -1,4 +1,4 @@
-# 🎧 Zuno – Feel the Beat
+# 🎧 Zuno – Feel the Music
 
 **Zuno** is a custom-built, fully responsive music player web app, designed with passion and built using HTML, CSS, and JavaScript. It features a modern UI, smooth playback controls, playlists, and real-time interaction — all without using any external frameworks.
 
