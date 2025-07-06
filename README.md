@@ -31,18 +31,20 @@
 ---
 
 ## 📂 Folder Structure
-Zuno/
-├── assets/ # All images, icons, and logos
-├── songs/ # Music playlists with info.json & mp3 files
-│ └── Beats/
-│ ├── info.json
-│ ├── cover.jpg
-│ └── *.mp3
-├── index.html # Main HTML page
-├── style.css # Core styling
-├── utility.css # Reusable utility classes
-├── script.js # All JS logic
-└── README.md # You're here!
+<pre>
+    Zuno/
+    ├── assets/ # All images, icons, and logos
+    ├── songs/ # Music playlists with info.json & mp3 files
+    │ └── Beats/
+    │ ├── info.json
+    │ ├── cover.jpg
+    │ └── *.mp3
+    ├── index.html # Main HTML page
+    ├── style.css # Core styling
+    ├── utility.css # Reusable utility classes
+    ├── script.js # All JS logic
+    └── README.md # You're here!
+</pre>
 
 👤 Author
 Sameer Varshney
