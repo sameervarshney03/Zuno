@@ -155,8 +155,8 @@ function playmusic(index, pause = false) {
 // }
 
 async function displayplaylists() {
-    let a = await fetch(`/songs/`);
-    let response = await a.text();
+    let a = await fetch(`/songs/index.json`);
+    let response = await a.json();
     let div = document.createElement("div");
     div.innerHTML = response;
     let anchors = div.getElementsByTagName("a");
