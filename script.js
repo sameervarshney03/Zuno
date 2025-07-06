@@ -161,6 +161,7 @@ async function displayplaylists() {
     cardcontainer.innerHTML = "";
 
     for (const folder of folders) {
+        console.log("Loading playlist:", folder);
         try {
             let metaRes = await fetch(`/songs/${folder}/info.json`);
             let meta = await metaRes.json();
