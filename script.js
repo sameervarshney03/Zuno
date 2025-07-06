@@ -302,6 +302,90 @@ async function main() {
         let percent = e.offsetX / e.target.getBoundingClientRect().width;
         currentsong.currentTime = percent * currentsong.duration;
     });
+    const seekbar = document.querySelector(".seekbar");
+    const circle = document.querySelector(".circle");
+    const progress = document.querySelector(".progress");
+
+    let isDragging = false;
+    let wasPlaying = false;
+
+    // Update UI during playback (only if not dragging)
+    currentsong.addEventListener("timeupdate", () => {
+        if (!isDragging && currentsong.duration) {
+            const percent = (currentsong.currentTime / currentsong.duration) * 100;
+            circle.style.left = percent + "%";
+            progress.style.width = percent + "%";
+        }
+
+        document.querySelector(".songtime").innerHTML =
+            `${formatTime(currentsong.currentTime)} / ${formatTime(currentsong.duration)}`;
+    });
+
+    // Seekbar click (jump to point)
+    seekbar.addEventListener("click", (e) => {
+        const rect = seekbar.getBoundingClientRect();
+        const percent = (e.clientX - rect.left) / rect.width;
+        updateToPercent(percent);
+    });
+
+    // Mouse drag
+    circle.addEventListener("mousedown", () => {
+        isDragging = true;
+        wasPlaying = !currentsong.paused;
+        currentsong.pause();
+    });
+
+    document.addEventListener("mouseup", () => {
+        if (isDragging) {
+            isDragging = false;
+            if (wasPlaying) currentsong.play();
+        }
+    });
+
+    document.addEventListener("mousemove", (e) => {
+        if (isDragging) {
+            const rect = seekbar.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            updateToPercent(percent);
+        }
+    });
+
+    // Touch drag
+    circle.addEventListener("touchstart", () => {
+        isDragging = true;
+        wasPlaying = !currentsong.paused;
+        currentsong.pause();
+    });
+
+    document.addEventListener("touchend", () => {
+        if (isDragging) {
+            isDragging = false;
+            if (wasPlaying) currentsong.play();
+        }
+    });
+
+    document.addEventListener("touchmove", (e) => {
+        if (isDragging) {
+            const rect = seekbar.getBoundingClientRect();
+            const percent = (e.touches[0].clientX - rect.left) / rect.width;
+            updateToPercent(percent);
+        }
+    });
+
+    // Update current time and visuals
+    function updateToPercent(percent) {
+        percent = Math.max(0, Math.min(1, percent)); // Clamp between 0–1
+        const newTime = percent * currentsong.duration;
+
+        currentsong.currentTime = newTime;
+        circle.style.left = percent * 100 + "%";
+        progress.style.width = percent * 100 + "%";
+
+        // also update time display instantly
+        document.querySelector(".songtime").innerHTML =
+            `${formatTime(newTime)} / ${formatTime(currentsong.duration)}`;
+    }
+
 
     // Hamburger
     document.querySelector(".hamburger").addEventListener("click", () => {
