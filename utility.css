@@ -1,0 +1,154 @@
+.border{
+    border: 2px solid white;
+    margin:3px;
+}
+.flex{
+    display:flex;
+}
+.justify-center{
+    justify-content: center;
+
+}
+.item-center{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color:white;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey{
+    background-color: #121212;
+}
+.rounded{
+    border-radius: 7px;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 10px;
+}
+/* For Chrome, Edge, Brave, Opera */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(18, 18, 18, 0.2); /* very dark translucent background */
+  backdrop-filter: blur(4px); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.25); /* grey with transparency */
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1); /* light border for glass edge feel */
+  backdrop-filter: blur(8px); /* strong glass blur */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* soft shadow for depth */
+}
+
+/* Remove scrollbar arrows */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160, 160, 160, 0.3) rgba(18, 18, 18, 0.2);
+}
+
+
+
+input[type="range"].volume-slider {
+  /* -webkit-appearance: none; */
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(to right, #4f8cff 50%, #1a1a2e 50%);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* WebKit track */
+input[type="range"].volume-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* WebKit thumb */
+input[type="range"].volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4f8cff;
+  border: 2px solid #0a1f44;
+  box-shadow: 0 0 6px #4f8cff;
+  margin-top: -5px;
+  transition: box-shadow 0.3s ease, background 0.3s;
+}
+
+input[type="range"].volume-slider:hover::-webkit-slider-thumb {
+  background: #6aa6ff;
+  box-shadow: 0 0 10px #6aa6ff;
+}
+
+/* Firefox track */
+input[type="range"].volume-slider::-moz-range-track {
+  height: 6px;
+  background: #1a1a2e;
+  border-radius: 10px;
+}
+
+input[type="range"].volume-slider::-moz-range-progress {
+  background: #4f8cff;
+  height: 6px;
+  border-radius: 10px;
+}
+
+/* Firefox thumb */
+input[type="range"].volume-slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4f8cff;
+  border: 2px solid #0a1f44;
+  box-shadow: 0 0 6px #4f8cff;
+  transition: box-shadow 0.3s ease, background 0.3s;
+}
+
+input[type="range"].volume-slider:hover::-moz-range-thumb {
+  background: #6aa6ff;
+  box-shadow: 0 0 10px #6aa6ff;
+}
+
+/* Internet Explorer (legacy) */
+input[type="range"].volume-slider::-ms-fill-lower {
+  background: #4f8cff;
+  border-radius: 10px;
+}
+
+input[type="range"].volume-slider::-ms-fill-upper {
+  background: #1a1a2e;
+  border-radius: 10px;
+}
+
+input[type="range"].volume-slider::-ms-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4f8cff;
+  border: 2px solid #0a1f44;
+  box-shadow: 0 0 6px #4f8cff;
+}
+
+/* Dynamic fill color using JavaScript (for WebKit browsers) */
+
+
+

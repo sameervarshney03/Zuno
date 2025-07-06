@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" type="image/png" href="assets/favicon.svg">
+
+    <title>Zuno – Feel the Music : FREE Music for everyone</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <img class="logozuno invert" src="assets/logo.svg" alt="Zuno">
+                <img src="assets/cross.svg" alt="cross" class="cross invert">
+                <ul>
+                    <li>
+                        <img class="invert" src="assets/home.svg" alt="home">Home
+                    </li>
+                    <li class="search-1">
+                        <img class="invert" src="assets/search.svg" alt="search">Search
+                    </li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert " src="assets/playlist.svg" alt="playlist">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songlist">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <img class="invert hamburger" src="assets/hamburger.svg" alt="">
+                    <span class="welcome-text">Welcome to Zuno 🎵</span>
+                    <!-- <svg class="invert arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24" color="#000000" fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg class="invert arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                        height="24" color="#000000" fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg> -->
+
+                </div>
+                <div class="button" id="authButtons">
+                    <button onclick='window.location.href="auth.html"' class="signupbtn">Sign up</button>
+                    <button onclick="window.location.href='auth.html'" class="loginbtn">Log in</button>
+                </div>
+                <div class="button hidden" id="logoutButton">
+                    <button class="logoutbtn">Log out</button>
+                </div>
+            </div>
+            <div class="TrendingSongs">
+                <h2>Playlists</h2>
+                <div class="cardcontainer">
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="abovebar">
+                        <div class="songinfo">
+
+                        </div>
+                        <div class="songbuttons">
+                            <img id="previous" class="invert pp" src="assets/previous.svg" alt="previous">
+                            <img id="play" class="invert pp" src="assets/play.svg" alt="play">
+                            <img id="next" class="invert pp" src="assets/next.svg" alt="next">
+                        </div>
+                        <div class="timevol">
+                            <div class="songtime">
+
+                            </div>
+                            <div class="volume">
+                                <img class="invert" src="assets/volume.svg" alt="Volume">
+                                <div class="range">
+                                    <input type="range" class="volume-slider" id="volumeSlider" name="range"
+                                        id="Range1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

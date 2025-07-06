@@ -1,0 +1,7 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" fill="black">
+  <g transform="translate(0,5)">
+    <rect x="0" y="0" width="50" height="50" rx="10" ry="10" fill="none" stroke="black" stroke-width="4"/>
+    <path d="M12,15 Q12,10 17,10 H33 Q38,10 38,15 Q38,18 35,20 L20,35 H33 Q38,35 38,40 Q38,45 33,45 H17 Q12,45 12,40 Q12,37 15,35 L30,20 H17 Q12,20 12,15 Z" fill="black"/>
+  </g>
+  <text x="60" y="43" font-family="Arial, sans-serif" font-size="32" font-weight="bold">ZUNO</text>
+</svg>
