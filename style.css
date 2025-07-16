@@ -73,7 +73,6 @@ body {
     position: absolute;
     bottom: 0;
     padding: 15px 0px;
-    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -511,6 +510,7 @@ body {
         justify-content: center;
         align-items: center;
         margin-left: 2px !important;
+        margin-bottom: 10px;
     }
 
     .abovebar {
@@ -549,6 +549,9 @@ body {
         gap: 10px;
         justify-content: center;
         margin-bottom:5px ;
+    }
+    .footer{
+        margin-bottom: 15px;
     }
 }
 
