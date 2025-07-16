@@ -58,7 +58,7 @@ body {
 }
 
 .library {
-    min-height: 85vh;
+    min-height: 85dvh;
     position: relative;
 }
 
@@ -108,7 +108,7 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     margin: 20px;
-    max-height: 70vh;
+    max-height: 70dvh;
     overflow: auto;
 }
 
@@ -493,7 +493,7 @@ body {
         height: 85vh;
     }
     .left{
-        height: 100vh;
+        height: 100dvh;
         position: fixed;
         top: 0;
     }
@@ -521,7 +521,7 @@ body {
     .cardcontainer {
         max-height: unset;
         overflow-y: unset;
-        margin-bottom: 30vh;
+        margin-bottom: 30dvh;
     }
 
 
