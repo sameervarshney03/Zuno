@@ -73,6 +73,7 @@ body {
     position: absolute;
     bottom: 0;
     padding: 15px 0px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
