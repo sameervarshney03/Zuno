@@ -327,7 +327,6 @@ async function main() {
         const percent = (e.clientX - rect.left) / rect.width;
         updateToPercent(percent);
     });
-
     // Mouse drag
     circle.addEventListener("mousedown", () => {
         isDragging = true;
@@ -402,14 +401,14 @@ async function main() {
         document.querySelector(".left").style.left = "-120%";
     })
 
-    // ✅ REAL FIXED Previous
+    // Previous
     previous.addEventListener("click", () => {
         if (currentSongIndex > 0) {
             playmusic(currentSongIndex - 1);
         }
     });
 
-    // ✅ REAL FIXED Next
+    //  Next
     next.addEventListener("click", () => {
         if (currentSongIndex < songs.length - 1) {
             playmusic(currentSongIndex + 1);
