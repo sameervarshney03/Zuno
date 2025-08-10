@@ -182,7 +182,7 @@ function playmusic(index, pause = false) {
 
 // }
 async function displayplaylists() {
-    console.log("🧠 displayplaylists() called");
+    console.log("displayplaylists() called");
     let res = await fetch("/songs/index.json");
     let folders = await res.json();
 
